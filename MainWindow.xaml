@@ -1,0 +1,63 @@
+﻿<Window x:Class="WpfApp20test1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp20test1"
+        mc:Ignorable="d"
+        Icon="Image/calculator.png"
+       Title="Calculator" MinHeight="520" MinWidth="420" MaxHeight="520" MaxWidth="420">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF962d2d" Offset="0"/>
+                <GradientStop Color="#FF2F28FF" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBox Grid.Row="0" Text="Calculator v.3" FontFamily="Bahnschrift SemiBold Condensed" FontSize="15" HorizontalAlignment="Left" Margin="5" Padding="2" Width="100" HorizontalContentAlignment="Center">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0434F9" Offset="0.189"/>
+                    <GradientStop Color="#FF1AB8D6" Offset="0.661"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox Grid.Row="1" FontFamily="Bahnschrift SemiBold Condensed" Background="White" Margin="5" FontSize="48" TextWrapping="Wrap" Padding="5"
+                 HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" IsReadOnly="True" x:Name="calcWindow">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <UniformGrid Rows="6" Columns="4" Grid.Row="2" Margin="5">
+            <Button Content="%" Style="{StaticResource ButtonStyle}" Name="percent"/>
+            <Button Content="π" Style="{StaticResource ButtonStyle}" Name="pi"/>
+            <Button Content="AC" Style="{StaticResource ButtonStyle}" Name="AC"/>
+            <Button Content="←" Style="{StaticResource ButtonStyle}" Name="backspace"/>
+            <Button Content="1/x" Style="{StaticResource ButtonStyle}" Name="onedivideby"/>
+            <Button Content="x²" Style="{StaticResource ButtonStyle}" Name="tosquare"/>
+            <Button Content="√х" Style="{StaticResource ButtonStyle}" Name="squareroot"/>
+            <Button Content="÷" Style="{StaticResource ButtonStyle}" Name="divide"/>
+            <Button Content="1" Style="{StaticResource ButtonStyle}" Name="num1"/>
+            <Button Content="2" Style="{StaticResource ButtonStyle}" Name="num2"/>
+            <Button Content="3" Style="{StaticResource ButtonStyle}" Name="num3"/>
+            <Button Content="x" Style="{StaticResource ButtonStyle}" Name="multi"/>
+            <Button Content="4" Style="{StaticResource ButtonStyle}" Name="num4"/>
+            <Button Content="5" Style="{StaticResource ButtonStyle}" Name="num5"/>
+            <Button Content="6" Style="{StaticResource ButtonStyle}" Name="num6"/>
+            <Button Content="-" Style="{StaticResource ButtonStyle}" Name="minus"/>
+            <Button Content="7" Style="{StaticResource ButtonStyle}" Name="num7"/>
+            <Button Content="8" Style="{StaticResource ButtonStyle}" Name="num8"/>
+            <Button Content="9" Style="{StaticResource ButtonStyle}" Name="num9"/>
+            <Button Content="+" Style="{StaticResource ButtonStyle}" Name="plus"/>
+            <Button Content="±" Style="{StaticResource ButtonStyle}" Name="plusminus"/>
+            <Button Content="0" Style="{StaticResource ButtonStyle}" Name="num0"/>
+            <Button Content="," Style="{StaticResource ButtonStyle}" Name="dot"/>
+            <Button Content="=" Style="{StaticResource ButtonStyle}" Name="equal"/>
+        </UniformGrid>
+    </Grid>
+</Window>
